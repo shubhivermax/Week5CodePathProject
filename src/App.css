@@ -1,0 +1,100 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.App {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #000000;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.show-card {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: #c26b6b;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.show-card img {
+  width: 220px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.attributes {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+.attr {
+  display: inline-block;
+  margin: 0 0.3em;
+  padding: 0.2em 0.5em;
+  background: #3e4762;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.attr:hover {
+  background: #a5b4fc;
+}
+.ban-list {
+  margin-top: 2rem;
+  background: #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.ban-item {
+  display: inline-block;
+  margin: 0.2em 0.4em;
+  padding: 0.2em 0.6em;
+  background: #fecaca;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.ban-item:hover {
+  background: #f87171;
+  color: #fff;
+}
