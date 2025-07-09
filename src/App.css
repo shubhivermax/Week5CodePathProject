@@ -32,7 +32,9 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-
+.button {
+  background: #86432e;
+}
 .card {
   padding: 2em;
 }
@@ -42,14 +44,21 @@
 }
 
 .App {
-  max-width: 500px;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
   background: #000000;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  text-align: center;
+  display: flex;
+  gap: 2rem;
 }
+
+.main-content {
+  flex: 1;
+  text-align: left;
+}
+
 .show-card {
   margin: 2rem 0;
   padding: 1rem;
@@ -79,14 +88,17 @@
   background: #a5b4fc;
 }
 .ban-list {
-  margin-top: 2rem;
-  background: #f3f4f6;
+  width: 300px;
+  background: #517bd1;
   padding: 1rem;
   border-radius: 8px;
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
 }
 .ban-item {
-  display: inline-block;
-  margin: 0.2em 0.4em;
+  display: block;
+  margin: 0.2em 0;
   padding: 0.2em 0.6em;
   background: #fecaca;
   border-radius: 4px;

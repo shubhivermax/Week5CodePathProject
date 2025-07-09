@@ -62,32 +62,34 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Discover a TV Show!</h1>
-      <button onClick={fetchRandomShow} disabled={loading}>
-        {loading ? 'Loading...' : 'Discover'}
-      </button>
-      {error && <p style={{color:'red'}}>{error}</p>}
-      {show && (
-        <div className="show-card">
-          <img src={show.image.medium} alt={show.name} style={{borderRadius:'8px'}} />
-          <h2>{show.name}</h2>
-          <div className="attributes">
-            <div>
-              <strong>Genres:</strong> {show.genres.map(g => (
-                <span key={g} className="attr" onClick={() => handleBan(g)}>{g} </span>
-              ))}
-            </div>
-            <div>
-              <strong>Language:</strong> <span className="attr" onClick={() => handleBan(show.language)}>{show.language}</span>
-            </div>
-            {show.network && (
+      <div className="main-content">
+        <h1>Discover a TV Show!</h1>
+        <button onClick={fetchRandomShow} disabled={loading}>
+          {loading ? 'Loading...' : 'Discover'}
+        </button>
+        {error && <p style={{color:'red'}}>{error}</p>}
+        {show && (
+          <div className="show-card">
+            <img src={show.image.medium} alt={show.name} style={{borderRadius:'8px'}} />
+            <h2>{show.name}</h2>
+            <div className="attributes">
               <div>
-                <strong>Network:</strong> <span className="attr" onClick={() => handleBan(show.network.name)}>{show.network.name}</span>
+                <strong>Genres:</strong> {show.genres.map(g => (
+                  <span key={g} className="attr" onClick={() => handleBan(g)}>{g} </span>
+                ))}
               </div>
-            )}
+              <div>
+                <strong>Language:</strong> <span className="attr" onClick={() => handleBan(show.language)}>{show.language}</span>
+              </div>
+              {show.network && (
+                <div>
+                  <strong>Network:</strong> <span className="attr" onClick={() => handleBan(show.network.name)}>{show.network.name}</span>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
       <div className="ban-list">
         <h3>Ban List</h3>
         {banList.length === 0 && <p>No bans yet. Click an attribute to ban it!</p>}
